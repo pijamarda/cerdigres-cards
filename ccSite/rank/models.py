@@ -8,7 +8,7 @@ class Card(models.Model):
         return self.card_text
 
 class Rulebook(models.Model):
-    #owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50, default='name')
     description_text = models.CharField(max_length=200, default='description')
     general_votes = models.IntegerField(default=0)
