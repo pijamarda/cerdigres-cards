@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["ec2-54-93-231-93.eu-central-1.compute.amazonaws.com",'localhos
 # Application definition
 
 INSTALLED_APPS = [
+    'home.apps.HomeConfig',
     'rank.apps.RankConfig',
     'django.contrib.admin',
     'django.contrib.auth',
