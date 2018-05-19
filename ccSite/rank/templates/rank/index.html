@@ -1,0 +1,9 @@
+{% if rulebook_list %}
+    <ul>
+    {% for rulebook in rulebook_list %}
+        <li><a href="/rulebook/{{ rulebook.id }}/">{{ rulebook.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No rulebooks are available.</p>
+{% endif %}
