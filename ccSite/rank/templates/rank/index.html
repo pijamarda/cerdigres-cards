@@ -1,3 +1,7 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
 {% if rulebook_list %}
     <ul>
     {% for rulebook in rulebook_list %}
@@ -7,3 +11,5 @@
 {% else %}
     <p>No rulebooks are available.</p>
 {% endif %}
+
+{% endblock content %}

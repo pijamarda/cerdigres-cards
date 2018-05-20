@@ -1,0 +1,41 @@
+{% load staticfiles %}
+
+<html>
+    <head>        
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <title>Cerdigres Cards</title>
+    </head>
+    <body>
+        <div class="page-header">
+         {% if user.is_authenticated %}
+                
+                <p class="top-menu">
+                    <a href="{% url 'logout' %}">
+                    <span class="glyphicon glyphicon-share"> Logout </span>
+                    </a>
+                 </p>
+                 <p class="top-menu">
+                    <span class="glyphicon glyphicon-user"> {{ user.username }} </span>
+                 </p>
+            {% else %}
+                
+                <a href="{% url 'register' %}" class="top-menu">
+                    <span class="glyphicon glyphicon-edit"> Register </span>
+                </a>
+                <a href="{% url 'login' %}" class="top-menu">
+                    <span class="glyphicon glyphicon-lock"> Login </span>
+                </a>
+            {% endif %}
+            <h1> <a href="/euro2016">Porra LDS</a></h1>
+
+        </div>
+        <div class="content">            
+
+            <div>
+                {% block content %}
+                {% endblock %}           
+                
+            </div>
+        </div>
+    </body>
+</html>
