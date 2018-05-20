@@ -1,6 +1,17 @@
 {% if rulebook %}
-    {{rulebook}}
-    {% for a in rulebook %}
-        {{a}}
-    {% endfor %}
+    {{rulebook.owner}}
+    {{rulebook.name}}
+    {{rulebook.description_text}}
+    {{rulebook.general_votes}}
+    {{rulebook.valor_hot}}
+    {{rulebook.valor_new}}
+    {{rulebook.create_date}}
+    {{rulebook.modified_date}}
+    {{rulebook.recomended_age_min}}
+    {{rulebook.recomended_age_max}}
+    {{rulebook.num_players_min}}
+    {{rulebook.num_players_max}}
+    {{rulebook.skill_rate}}
+    {{rulebook.luck_rate}}
+    {{rulebook.game_time_median}}    
 {% endif %}
