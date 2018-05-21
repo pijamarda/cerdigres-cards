@@ -6,7 +6,7 @@ from . import views
 app_name = 'rulebook'
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.rulebook_list, name='rulebook_list'),
     path('<int:rulebook_id>/', views.rulebook_detail, name='rulebook_detail'),
-    
+        
 ]

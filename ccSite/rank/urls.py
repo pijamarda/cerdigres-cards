@@ -6,6 +6,6 @@ from . import views
 app_name = 'rank'
 
 urlpatterns = [
-    path('', views.index, name='index'),    
+    path('', views.rulebook_list, name='index'),    
     
 ]

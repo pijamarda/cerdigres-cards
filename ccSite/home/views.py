@@ -3,4 +3,4 @@ from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 
 def index(request):
-    return HttpResponse("Hola ya funciona la pagina")
+    return render(request, 'home/index.html')
