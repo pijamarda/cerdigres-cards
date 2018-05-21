@@ -5,6 +5,7 @@ from .models import Rulebook
 
 def index(request):
     #nothing to be done here yet
+    print("hola")
 
 def rulebook_list(request):
     #return HttpResponse("Hola ya funciona la pagina")
