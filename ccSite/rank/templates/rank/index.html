@@ -3,11 +3,27 @@
 {% block content %}
 
 {% if rulebook_list %}
-    <ul>
-    {% for rulebook in rulebook_list %}
-        <li><a href="{% url 'rulebook:rulebook_detail' rulebook.id %}">{{ rulebook.name }}</a></li>
-    {% endfor %}
-    </ul>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Votes</th>
+            <th scope="col">Age</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+            <td>
+                <a href="{% url 'rulebook:rulebook_detail' rulebook.id %}">{{ rulebook.name }}</a>
+            </td>
+            <td>{{ rulebook.description_text }}</td>
+            <td>{{ rulebook.general_votes }}</td>
+            <td>{{ rulebook.description_text }}</td>
+            <td>{{ rulebook.recomended_age_min }}-{{ rulebook.recomended_age_max }}</td>       
+           
+        </tbody>
+    </table>
 {% else %}
     <p>No rulebooks are available.</p>
 {% endif %}
