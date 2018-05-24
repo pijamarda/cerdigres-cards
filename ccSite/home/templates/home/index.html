@@ -1,5 +1,40 @@
 {% extends 'home/base.html' %}
 
 {% block content %}
-    <a href="{% url 'rulebook:rulebook_list' %}"> Rulebooks list</a>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Hello, world!</h1>
+            <p>Who’s got family coming in this holiday season? Or are you the one doing the visiting? Whatever your winter brings, 
+                bringing the Piggers deck of cards with you can lead to hours of entertainment for everybody. 
+                Teach your young cousins to play, or suggest a game with mom and dad. You know as well as we do that some of the best memories of quality time with relatives come from late nights playing cards. 
+                Throw one of Molly Wellmann’s drinks into the mix, along with a warm fireplace and some homemade goodies, and you’ve got a whole evening going.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4">
+        <h2>Rulebooks</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="rank/" role="button">Rulebook Ranking &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+        <h2>Forum</h2>
+        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+        <h2>Create Rulebook</h2>
+        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        <p><a class="btn btn-secondary" href="{% url 'rulebook:rulebook_create' %}" role="button">Your own rulebook &raquo;</a></p>
+        </div>
+    </div>
+
+    <hr>
+
+    </div> <!-- /container -->
+    
 {% endblock content %}

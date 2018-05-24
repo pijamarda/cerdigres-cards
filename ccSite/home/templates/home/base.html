@@ -6,36 +6,43 @@
         <title>Cerdigres Cards</title>
     </head>
     <body>
-        <div class="page-header">
-         {% if user.is_authenticated %}
-                
-                <p class="top-menu">
-                    <a href="{% url 'logout' %}">
-                    <span class="glyphicon glyphicon-share"> Logout </span>
-                    </a>
-                 </p>
-                 <p class="top-menu">
-                    <span class="glyphicon glyphicon-user"> {{ user.username }} </span>
-                 </p>
-            {% else %}
-                
-                <a href="{% url 'register' %}" class="top-menu">
-                    <span class="glyphicon glyphicon-edit"> Register </span>
-                </a>
-                <a href="{% url 'login' %}" class="top-menu">
-                    <span class="glyphicon glyphicon-lock"> Login </span>
-                </a>
-            {% endif %}
-            <h1> <a href="/">Cerdigres Cards</a></h1>
+            <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">                
+                    <div class="nav">
+                            <a class="nav-link active" href="/">Home</a>
+                            <a class="nav-link" href="rank/">Rulebooks</a>
+                            <a class="nav-link" href="#">Link</a>                            
+                    </div>
+                    <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                            {% if user.is_authenticated %}
+                            <li class="nav-item" style="padding-right: 2em;">
+                                    <a href="{% url 'logout' %}">
+                                            <span class="glyphicon glyphicon-share"> Logout </span>
+                                            </a>
+                            </li>
+                            <li class="nav-item">
+                                    <span class="glyphicon glyphicon-user"> {{ user.username }} </span>
+                            </li>
+                            {% else %}
+                            <li class="nav-item" style="padding-right: 2em;">
+                                    <a href="{% url 'register' %}" class="top-menu">
+                                            <span class="glyphicon glyphicon-edit"> Register </span>
+                                        </a>
+                                        
+                            </li>
+                            <li class="nav-item">
+                                    <a href="{% url 'login' %}" class="top-menu">
+                                            <span class="glyphicon glyphicon-lock"> Login </span>
+                                        </a>
+                            </li>
+                            {% endif %}
+                    </ul>
+            
 
-        </div>
-        <div class="content">            
-
-            <div>
+        </header>
+        
+        <main role="main">      
                 {% block content %}
-                {% endblock %}           
-                
-            </div>
-        </div>
+                {% endblock %}    
+        </main>
     </body>
 </html>
