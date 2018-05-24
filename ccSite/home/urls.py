@@ -11,6 +11,6 @@ urlpatterns = [
             form_class=UserCreationForm,
             success_url='/'
     ), name='register'),
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),    
     path('', views.index, name='index'),
 ]

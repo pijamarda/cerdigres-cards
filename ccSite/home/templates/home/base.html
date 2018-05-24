@@ -2,21 +2,22 @@
 
 <html>
     <head>        
-		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
         <title>Cerdigres Cards</title>
     </head>
     <body>
             <header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">                
                     <div class="nav">
                             <a class="nav-link active" href="/">Home</a>
-                            <a class="nav-link" href="rank/">Rulebooks</a>
+                            <a class="nav-link" href="{% url 'rank:index' %}">Rulebooks</a>
                             <a class="nav-link" href="#">Link</a>                            
                     </div>
                     <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                             {% if user.is_authenticated %}
                             <li class="nav-item" style="padding-right: 2em;">
-                                    <a href="{% url 'logout' %}">
-                                            <span class="glyphicon glyphicon-share"> Logout </span>
+                                    <a href="{% url 'logout' %}?next=/">
+                                            <span class="fas fa-sign-out-alt"> Logout </span>
                                             </a>
                             </li>
                             <li class="nav-item">
@@ -25,13 +26,13 @@
                             {% else %}
                             <li class="nav-item" style="padding-right: 2em;">
                                     <a href="{% url 'register' %}" class="top-menu">
-                                            <span class="glyphicon glyphicon-edit"> Register </span>
+                                            <span class="fas fa-user-plus">  </span>Register
                                         </a>
                                         
                             </li>
                             <li class="nav-item">
                                     <a href="{% url 'login' %}" class="top-menu">
-                                            <span class="glyphicon glyphicon-lock"> Login </span>
+                                            <span class="fas fa-sign-in-alt">  </span>Login
                                         </a>
                             </li>
                             {% endif %}
