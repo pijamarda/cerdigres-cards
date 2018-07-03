@@ -1,17 +1,42 @@
-{% if rulebook %}
-    {{rulebook.owner}}
-    {{rulebook.name}}
-    {{rulebook.description_text}}
-    {{rulebook.general_votes}}
-    {{rulebook.valor_hot}}
-    {{rulebook.valor_new}}
-    {{rulebook.create_date}}
-    {{rulebook.modified_date}}
-    {{rulebook.recomended_age_min}}
-    {{rulebook.recomended_age_max}}
-    {{rulebook.num_players_min}}
-    {{rulebook.num_players_max}}
-    {{rulebook.skill_rate}}
-    {{rulebook.luck_rate}}
-    {{rulebook.game_time_median}}    
-{% endif %}
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+    {% if rulebook %}
+        <div class="col">
+            <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">Owner
+        <span class="badge badge-primary badge-pill">{{rulebook.owner}}</span>
+    </li>
+    <li class="list-group-item">Name {{rulebook.name}}</li>
+    <li class="list-group-item">Description {{rulebook.description_text}}</li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Votes
+        <span class="badge badge-primary badge-pill">{{rulebook.general_votes}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Hot
+        <span class="badge badge-primary badge-pill">{{rulebook.valor_hot}}</span>
+    </li>
+                
+            </ul>    
+        </div>
+        <div class="col">
+            
+        </div>
+    </div>
+        {{rulebook.valor_new}}
+        {{rulebook.create_date}}
+        {{rulebook.modified_date}}
+        {{rulebook.recomended_age_min}}
+        {{rulebook.recomended_age_max}}
+        {{rulebook.num_players_min}}
+        {{rulebook.num_players_max}}
+        {{rulebook.skill_rate}}
+        {{rulebook.luck_rate}}
+        {{rulebook.game_time_median}}    
+    {% endif %}
+    
+</div>
+
+{% endblock content %}
