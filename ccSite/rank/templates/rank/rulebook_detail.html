@@ -18,23 +18,39 @@
     <li class="list-group-item d-flex justify-content-between align-items-center">Hot
         <span class="badge badge-primary badge-pill">{{rulebook.valor_hot}}</span>
     </li>
-                
+    <li class="list-group-item d-flex justify-content-between align-items-center">New
+        <span class="badge badge-primary badge-pill">{{rulebook.valor_new}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Date created
+        <span class="badge badge-primary badge-pill">{{rulebook.create_date}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Date modified
+        <span class="badge badge-primary badge-pill">{{rulebook.modified_date}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Recommended age
+        <span class="badge badge-primary badge-pill">{{rulebook.recommended_age_min}}</span>
+        <span class="badge badge-primary badge-pill">{{rulebook.recommended_age_max}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Num players
+        <span class="badge badge-primary badge-pill">{{rulebook.num_players_min}}</span>
+        <span class="badge badge-primary badge-pill">{{rulebook.num_players_max}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Skill
+        <span class="badge badge-primary badge-pill">{{rulebook.skill_rate}}</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">Luck
+        <span class="badge badge-primary badge-pill">{{rulebook.luck_rate}}</span>
+    </li> 
+    <li class="list-group-item d-flex justify-content-between align-items-center">Game time
+        <span class="badge badge-primary badge-pill">{{rulebook.game_time_median}}</span>
+    </li>       
             </ul>    
         </div>
         <div class="col">
             
         </div>
     </div>
-        {{rulebook.valor_new}}
-        {{rulebook.create_date}}
-        {{rulebook.modified_date}}
-        {{rulebook.recomended_age_min}}
-        {{rulebook.recomended_age_max}}
-        {{rulebook.num_players_min}}
-        {{rulebook.num_players_max}}
-        {{rulebook.skill_rate}}
-        {{rulebook.luck_rate}}
-        {{rulebook.game_time_median}}    
+
     {% endif %}
     
 </div>
