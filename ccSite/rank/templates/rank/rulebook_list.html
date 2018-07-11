@@ -12,6 +12,8 @@
             <th scope="col">Name</th>
             <th scope="col">Votes</th>
             <th scope="col">Description</th>
+            <th scope="col">Skill</th>
+            <th scope="col">Luck</th>
             <th scope="col">Age</th>
         </tr>
         </thead>
@@ -23,6 +25,8 @@
                 </td>
                 <td>{{ rulebook.general_votes }}</td>
                 <td>{{ rulebook.description_text }}</td>
+                <td>{{ rulebook.skill_rate }}</td>
+                <td>{{ rulebook.luck_rate }}</td>
                 <td>{{ rulebook.recommended_age_min }}-{{ rulebook.recommended_age_max }}</td>  
             </tr>   
             {% endfor %}  
